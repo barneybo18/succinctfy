@@ -45,7 +45,8 @@ const EditedImagePreview: React.FC<EditedImagePreviewProps> = ({
     if (!editedImageUrl) return;
     
     const capitalizedColorName = selectedColorName.charAt(0).toUpperCase() + selectedColorName.slice(1);
-    const shareText = `My @succinctlabs Stage 2 poster is ready! Team ${capitalizedColorName} all the way! 🚀 Can't wait to #provewithsuccinct. What does yours look like?`;
+    const appUrl = "https://succinctfy.vercel.app/";
+    const shareText = `My @succinctlabs Stage 2 poster is ready! Team ${capitalizedColorName} all the way! 🚀 Can't wait to #provewithsuccinct. What does yours look like? Want to make your own? Check here: ${appUrl}`;
     
     if (shareMethod === 'native') {
       await nativeShare(shareText, capitalizedColorName);
